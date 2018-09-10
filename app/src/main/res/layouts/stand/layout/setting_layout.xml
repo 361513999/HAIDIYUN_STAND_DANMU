@@ -1,0 +1,1130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/no_color"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/actionsheet_single_selector"
+        android:gravity="center"
+        android:text="设置"
+        android:textColor="@color/half_black"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/actionsheet_single_selector"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/wifi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_top_selector"
+                        android:gravity="center_vertical"
+                        android:text="选择合适的WIFI"
+                        android:textColor="@color/half_black"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/login"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:gravity="center_vertical"
+                        android:text="配置IP及登录"
+                        android:textColor="@color/half_black"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/con"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/actionsheet_single_selector"
+                            android:gravity="center_vertical"
+                            android:text="同步菜谱数据"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/delete"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/actionsheet_single_selector"
+                            android:gravity="center_vertical|right"
+                            android:text="清除菜谱资源(双击)"
+                            android:textColor="@color/red"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/con_img"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/actionsheet_single_selector"
+                            android:gravity="center_vertical"
+                            android:text="同步菜谱图片"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/delete_img"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/actionsheet_single_selector"
+                            android:gravity="center_vertical|right"
+                            android:text="清除菜谱图片(双击)"
+                            android:textColor="@color/red"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/con_video"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/actionsheet_single_selector"
+                            android:gravity="center_vertical"
+                            android:text="同步视频数据"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/delete_video"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/actionsheet_single_selector"
+                            android:gravity="center_vertical|right"
+                            android:text="清除视频资源(双击)"
+                            android:textColor="@color/red"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/con_adver"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/actionsheet_single_selector"
+                            android:gravity="center_vertical"
+                            android:text="同步推广数据"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/delete_adver"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/actionsheet_single_selector"
+                            android:gravity="center_vertical|right"
+                            android:text="清除推广资源(双击)"
+                            android:textColor="@color/red"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/change_skin"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/actionsheet_single_selector"
+                            android:gravity="center_vertical"
+                            android:text="更换皮肤"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/actionsheet_single_selector"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/red"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/cy_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/cy_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/broad_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/broad_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/prepay_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/prepay_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/waite_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/waite_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/dish_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/dish_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/ps_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/ps_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/reas_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/reas_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/table_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/table_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/screen_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/screen_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/price_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/price_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/room_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/room_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/hall_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/hall_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/giv_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/giv_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/txt_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/limt_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/limt_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/gua_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/gua_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/cd_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/cd_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/call_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/call_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/advert_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/advert_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/card_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/card_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/time_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/time_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tip_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/tip_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/tv_line"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/btn_line"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/edit_price_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/edit_price_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/tv_language"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <com.nightonke.jellytogglebutton.JellyToggleButton
+                            android:id="@+id/btn_language"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingEnd="20dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:paddingStart="20dp"
+                            app:jtbJelly="active_tremble_body_slim_jim"
+                            app:jtbLeftBackgroundColor="@color/je_bg"
+                            app:jtbLeftThumbColor="@color/je_left"
+                            app:jtbRightBackgroundColor="@color/je_bg"
+                            app:jtbRightThumbColor="@color/je_right" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/send_dev"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/actionsheet_single_selector"
+                            android:gravity="center_vertical"
+                            android:text="反馈给开发者"
+                            android:textColor="@color/half_black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/fspace"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/actionsheet_single_selector"
+                            android:gravity="center_vertical|right"
+                            android:textColor="@color/red"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/change"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_middle_selector"
+                        android:gravity="center_vertical"
+                        android:text="翻页版"
+                        android:textColor="@color/half_black"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/update"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/actionsheet_bottom_selector"
+                        android:gravity="center_vertical"
+                        android:text="检查更新"
+                        android:textColor="@color/half_black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/actionsheet_single_selector"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/half_black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

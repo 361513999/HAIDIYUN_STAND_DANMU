@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ban"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/par"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" >
+
+        <pad.stand.com.haidiyun.www.widget.HackyViewPager
+            android:id="@+id/bi_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/no_color" />
+
+        <ScrollView
+            android:layout_width="600dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="10dp"
+             android:layout_gravity="center_horizontal|bottom"
+            android:fadingEdge="vertical"
+            android:scrollbars="vertical" >
+
+            <TextView
+                android:id="@+id/textv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ban"
+                android:lineSpacingExtra="2dp"
+                android:padding="8dp"
+                android:scrollbars="vertical"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </ScrollView>
+    </FrameLayout>
+
+</LinearLayout>

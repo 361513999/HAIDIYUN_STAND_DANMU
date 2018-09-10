@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">海迪云平板点餐</string>
+    <string name="has_order_icon">已点菜单</string>
+    <string name="order">点餐</string>
+    <string name="has_order">已点餐</string>
+    <string name="search">助记码</string>
+    <string name="not_order">未下单菜品</string>
+    <string name="yep_order">已下单菜品</string>
+    <string name="clear_order">清空已点</string>
+    <string name="back_order">返回选餐</string>
+    <string name="sure_order">确定点餐</string>
+    <string name="sure_order1">补打</string>
+    <string name="select_table">选择桌台</string>
+    <string name="open_table">开台</string>
+    <string name="call_service">呼叫服务</string>
+    <string name="enter_password">请解开密码</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="config_wifi">请先配置wifi</string>
+    <string name="unname_table">未知桌台</string>
+    <string name="wifi_wrong">wifi获取有误</string>
+    <string name="repast">就餐中</string>
+    <string name="free">空闲</string>
+    <string name="pleaseselecttable">请选确认桌台</string>
+    <string name="callpay">通知结账</string>
+    <string name="ordersuccess">恭喜您，您已成功下单!</string>
+    <string name="notorder">还没有点菜呢</string>
+    <string name="selectperson">选择就餐人数</string>
+    <string name="noteat">还未就餐</string>
+    <string name="soldover">已售完</string>
+    <string name="hassoldover">暂停销售</string>
+    <string name="hasorderyet0">做法过多</string>
+</resources>

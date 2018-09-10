@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/h_menu_ll_select"
+        android:gravity="center_vertical"
+        android:minHeight="70dp"
+        android:orientation="horizontal"
+        android:paddingRight="12dp" >
+        <ImageView
+            android:id="@+id/h_item_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginBottom="9dp"
+            android:layout_marginTop="9dp"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop" />
+        <TextView
+            android:id="@+id/h_item_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_weight="1"
+            android:textColor="@drawable/h_menu_tv_select"
+            android:textSize="18sp" />
+        <ImageView
+            android:id="@+id/h_item_tv_jt"
+            android:layout_width="wrap_content"   
+            android:layout_height="wrap_content"
+            android:background="@drawable/home_foot_arrow_sel" />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/home_lv_driver" />
+</LinearLayout>

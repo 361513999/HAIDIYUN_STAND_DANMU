@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:orientation="vertical" >
+    
+	<TextView 
+	    android:id="@+id/skin_name"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textSize="25sp"
+	    android:textColor="@color/half_black"
+	    android:layout_alignParentLeft="true"
+	    android:layout_centerVertical="true"/>
+	<TextView 
+	    android:id="@+id/skin_select"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/f_drink_sel"
+	    android:textColor="@color/half_black"
+	    android:paddingLeft="8dp"
+	    android:paddingTop="5dp"
+	    android:paddingBottom="5dp"
+	    android:paddingRight="8dp"
+	    android:gravity="center"
+	    android:text="选择"
+	    android:textSize="22sp"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    />
+</RelativeLayout>

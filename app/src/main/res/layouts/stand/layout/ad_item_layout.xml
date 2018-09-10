@@ -1,0 +1,22 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+         
+             <Button 
+                 android:id="@+id/menu_title"
+                 android:layout_width="wrap_content"
+                 android:layout_gravity="center"
+                 android:paddingLeft="8dp"
+                 android:paddingRight="8dp"
+                 android:paddingTop="4dp"
+                 android:paddingBottom="4dp"
+                 android:gravity="center"
+                 android:ellipsize="end"
+                 android:background="@drawable/shape_common_cwhite"
+                 android:textSize="20sp"
+                  android:textColor="@drawable/h_menu_tv_select"
+                 android:layout_height="wrap_content"/>
+
+</LinearLayout>

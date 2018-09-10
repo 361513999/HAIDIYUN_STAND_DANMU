@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="no_color">#00000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white">#fafafa</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="text_cr">#666666</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
+    <color name="seperator_thin">#ffcbccd0</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00CC7A</color>
+    <color name="pik">#666699</color>
+    <color name="grey">#5B5B4F</color>
+    <color name="ban">#65000000</color>
+    <!-- 主界面点击菜单改变的颜色 -->
+    <color name="ll_color1">#3a960c</color>
+    <color name="ll_color0">#00000000</color>
+    <color name="serch_cl">#88453328</color>
+    <color name="je_left">#09F7C7</color>
+    <color name="je_right">#F76809</color>
+      <color name="je_bg">#D7D5D2</color>
+    <color name="tui">#b6aa94</color>
+    <color name="search_color">#BEBEBE</color>
+    <color name="tb_j">#2B2FEC</color>
+    <color name="tb_k">#3F8221</color>
+    <color name="tb_d">#2AE8C2</color>
+
+    <!--以下是cy资源-->
+
+    <color name="cy_home_bg">#E6F0E5</color>
+
+    <color name="cy_home_title">#CEF0CA</color>
+    <color name="cy_home_title_sel">#59E29C</color>
+    <color name="cy_center_txt">#FCA001</color>
+</resources>

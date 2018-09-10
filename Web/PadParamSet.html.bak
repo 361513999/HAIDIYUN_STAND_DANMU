@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>平板参数设置</title>
+    <meta charset="utf-8" />
+    <link href="easyui.css" rel="stylesheet" />
+    <link href="mobile.css" rel="stylesheet" />
+    <script src="jquery.min.js"></script>
+    <script src="jquery.easyui.min.js"></script>
+    <script src="jquery.easyui.mobile.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var Fields = {
+                changeName: function (entity) {
+                    if ($("#" + entity.filed).switchbutton("options").checked) {
+                        $("#sp" + entity.filed).text(entity.checkedText);
+                    } else {
+                        $("#sp" + entity.filed).text(entity.text);
+                    }
+                },
+                Disabled: function (entity, disEntity) {
+                    if ($("#" + entity.filed).switchbutton("options").checked) {
+                        $("#" + disEntity.filed).switchbutton("enable");
+                    } else {
+                        $("#" + disEntity.filed).switchbutton("disable").switchbutton("uncheck");
+                    }
+                },
+                SendOrderModel: {
+                    text: "顾客自助点餐模式", checkedText: "服务员再次确认点餐模式", filed: "SendOrderModel", change: function () {
+                        Fields.Disabled(Fields.SendOrderModel, Fields.AddMenuConfrim);
+                        Fields.changeName(Fields.SendOrderModel);
+                    }
+                },
+                AddMenuConfrim: {
+                    text: "加菜确认", checkedText: "自助加菜", filed: "AddMenuConfrim", change: function () {
+                        Fields.changeName(Fields.AddMenuConfrim);
+                    }
+                },
+                OpenTab: {
+                    text: "隐藏开台", checkedText: "显示开台", filed: "OpenTab", change: function () {
+                        Fields.changeName(Fields.OpenTab);
+                    }
+                },
+                SystemCloseModel: {
+                    text: "系统熄灭策略", checkedText: "屏幕常亮模式", filed: "SystemCloseModel", change: function () {
+                        Fields.changeName(Fields.SystemCloseModel);
+                    }
+                },
+                HideAmount: {
+                    text: "隐藏总价", checkedText: "显示总价", filed: "HideAmount", change: function () {
+                        Fields.changeName(Fields.HideAmount);
+                    }
+                },
+                HideMenu: {
+                    text: "隐藏包房菜品", checkedText: "显示包房菜", filed: "HideMenu", change: function () {
+                        Fields.changeName(Fields.HideMenu);
+                    }
+                },
+                RowFourMenu: {
+                    text: "每行四菜", checkedText: "每行三菜", filed: "RowFourMenu", change: function () {
+                        Fields.changeName(Fields.RowFourMenu);
+                    }
+                },
+                CancelShowQuantity: {
+                    text: "取消限制数量", checkedText: "开启限制数量", filed: "CancelShowQuantity", change: function () {
+                        Fields.changeName(Fields.CancelShowQuantity);
+                    }
+                },
+                CD: {
+                    text: "开启厨打", checkedText: "关闭厨打", filed: "CD", change: function () {
+                        Fields.changeName(Fields.CnEn);
+                    }
+                },
+                GD: {
+                    text: "开启挂单", checkedText: "关闭挂单", filed: "GD", change: function () {
+                        Fields.changeName(Fields.CnEn);
+                    }
+                },
+                CloseServer: {
+                    text: "开启呼叫服务", checkedText: "关闭呼叫服务", filed: "CloseServer", change: function () {
+                        Fields.changeName(Fields.CloseServer);
+                    }
+                },
+                Interface: {
+                    text: "默认界面", checkedText: "三联界面", filed: "Interface", change: function () {
+                        Fields.changeName(Fields.Interface);
+                    }
+                },
+                Notice: {
+                    text: "隐藏通知结账", checkedText: "显示通知结账", filed: "Notice", change: function () {
+                        Fields.changeName(Fields.Notice);
+                    }
+                },
+                Payment: {
+                    text: "后付费模式", checkedText: "先付费模式", filed: "Payment", change: function () {
+                        Fields.changeName(Fields.Payment);
+                    }
+                },
+                Password: {
+                    text: "餐台选择无密码模式", checkedText: "餐台选择必选密码模式", filed: "Password", change: function () {
+                        Fields.changeName(Fields.Password);
+                    }
+                },
+                Order: {
+                    text: "直接点餐", checkedText: "口味必选", filed: "Order", change: function () {
+                        Fields.changeName(Fields.Order);
+                    }
+                },
+                Hall: {
+                    text: "隐藏大厅菜", checkedText: "显示大厅菜", filed: "Hall", change: function () {
+                        Fields.changeName(Fields.Hall);
+                    }
+                },
+                Schema: {
+                    text: "图文模式", checkedText: "文字模式", filed: "Schema", change: function () {
+                        Fields.changeName(Fields.Schema);
+                    }
+                },
+                Meal: {
+                    text: "正常点餐", checkedText: "广告模式", filed: "Meal", change: function () {
+                        Fields.changeName(Fields.Meal);
+                    }
+                },
+                Disable: {
+                    text: "禁用电子支付", checkedText: "启用电子支付", filed: "Disable", change: function () {
+                        Fields.changeName(Fields.Disable);
+                    }
+                },
+                Supply: {
+                    text: "关闭供用时间", checkedText: "开启供用时间", filed: "Supply", change: function () {
+                        Fields.changeName(Fields.Supply);
+                    }
+                },
+                Prompt: {
+                    text: "关闭下单提示", checkedText: "开启下单提示", filed: "Prompt", change: function () {
+                        Fields.changeName(Fields.Prompt);
+                    }
+                },
+                Temporary: {
+                    text: "不允许临时菜改价", checkedText: "允许临时菜改价", filed: "Temporary", change: function () {
+                        Fields.changeName(Fields.Temporary);
+                    }
+                },
+                CnEn: {
+                    text: "切换英文", checkedText: "切换中文", filed: "CnEn", change: function () {
+                        Fields.changeName(Fields.CnEn);
+                    }
+                }
+				
+            };
+            var params = [
+                Fields.SendOrderModel,
+                Fields.AddMenuConfrim,
+                Fields.OpenTab,
+                Fields.SystemCloseModel,
+                Fields.HideAmount,
+                Fields.HideMenu,
+                Fields.RowFourMenu,
+                Fields.CancelShowQuantity,
+                Fields.CloseServer,
+				Fields.Interface,
+				Fields.Notice,
+				Fields.Payment,
+				Fields.Password,
+				Fields.Order,
+				Fields.Hall,
+				Fields.Schema,
+				Fields.Meal,
+				Fields.Disable,
+				Fields.Supply,
+				Fields.Prompt,
+				Fields.Temporary,
+                                Fields.CnEn,Fields.CD,Fields.GD
+            ];
+            var ulObj = $("#UlParams");
+            for (var i = 0; i < params.length; i++) {
+                ulObj.append("<li><span id=\"sp" + params[i].filed + "\">" + params[i].text + "</span><div class=\"m-right\"><a id=\"" + params[i].filed + "\"></a></div></li>");
+            }
+            ulObj.append("<li><div style=\"text-align:center;width:100%;\"><a id=\"btnSave\"></a></div></li>");
+            $.getJSON("http://localhost/DataService.svc/GetPadParamSet?jsoncallback=?",
+                    function (data) {
+                        var msg = JSON.parse(data);
+                        if (msg.Success) {
+                            if (!msg.Result)
+                                msg.Result = "{}";
+                            var entity = JSON.parse(msg.Result);
+                            for (var i = 0; i < params.length; i++) {
+                                var set = {
+                                    checked: entity[params[i].filed],
+                                    onText: "开",
+                                    offText: "关",
+                                    width: 70,
+                                    height: 30
+                                };
+                                if (params[i].change)
+                                    set.onChange = params[i].change;
+                                $("#" + params[i].filed).switchbutton(set);
+                                Fields.changeName(Fields[params[i].filed]);
+                            }
+                            Fields.Disabled(Fields.SendOrderModel, Fields.AddMenuConfrim);
+                        } else {
+                            alert(msg.Data);
+                        }
+                    });
+            $("#btnSave").linkbutton({
+                iconCls: "icon-save",
+                size: "large",
+                height: 35,
+                width: 80,
+                text: "保存",
+                onClick: function () {
+                    var entity = {};
+                    for (var i = 0; i < params.length; i++) {
+                        entity[params[i].filed] = $("#" + params[i].filed).switchbutton("options").checked;
+                    }
+                    $.getJSON("http://localhost/DataService.svc/WritePadParamSet?jsoncallback=?", {
+                        data: JSON.stringify(entity)
+                    },
+                            function (data) {
+                                var msg = JSON.parse(data);
+                                if (msg.Success) {
+                                    alert("保存成功");
+                                } else {
+                                    alert(msg.Data);
+                                }
+                            });
+                }
+            });
+        });
+    </script>
+    <style type="text/css">
+        .icon-save {
+            background: url('filesave.png') no-repeat center center;
+        }
+    </style>
+</head>
+<body>
+    <div style="width:100%;">
+        <div style="margin:auto;max-width:500px;min-height:1200px;">
+            <div class="easyui-navpanel">
+                <header>
+                    <div class="m-toolbar">
+                        <span class="m-title">平板参数设置</span>
+                    </div>
+                </header>
+                <ul id="UlParams" class="m-list" style="font-size:14px;font-weight:bold;"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

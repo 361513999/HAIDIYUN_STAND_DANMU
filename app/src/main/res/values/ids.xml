@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="fab_expand_menu_button" type="id"/>
+    <item name="fab_label" type="id"/>
+    <!-- 做法 -->
+    <item name="reason_id" type="id"/>
+    <!-- 下菜图片 -->
+    <item name="image_tag" type="id"/>
+    <!-- 换肤 -->
+    <item name="skin_tag_id" type="id"></item>
+    <item name="tips_0" type="id"/>
+    <item name="tips_1" type="id"/>
+</resources>

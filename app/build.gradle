@@ -1,0 +1,119 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "pad.stand.com.haidiyun.www"
+        minSdkVersion 15
+        targetSdkVersion 19
+        versionCode 158
+        versionName "1.8.9.3"
+        /*haidiyun_key*/
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    signingConfigs {
+        release{
+            storeFile file('keystore/haidiyun_key')
+            storePassword "haidiyun_key"
+            keyAlias "haidiyun"
+            keyPassword "haidiyun_key"
+        }
+        debug {
+            storeFile file('keystore/haidiyun_key')
+            storePassword "haidiyun_key"
+            keyAlias "haidiyun"
+            keyPassword "haidiyun_key"
+        }
+    }
+    buildTypes {
+
+        release {
+
+            minifyEnabled false
+           // shrinkResources true//去掉不用资源
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            res.srcDirs =
+                    [
+                            'src/main/res/layouts/flip',
+                            'src/main/res/layouts/stand',
+                            'src/main/res/layouts',
+                            'src/main/res'
+                    ]
+
+        }
+
+
+    }
+    //打包后应用名称
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            def fileName
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                if (variant.buildType.name.equals('release')) {
+                    fileName = applicationId + "_" + versionName + ".apk"
+                } else {
+                    //除了release就是debug
+                    fileName = "HAIDIYUN_STAND_DEBUG.apk"
+                }
+                output.outputFile = new File(outputFile.parent, fileName)
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    /* androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+                        exclude group: 'com.android.support', module: 'support-annotations'
+                        exclude module: 'support-compat-25.0.0'
+                        exclude module: 'support-core-ui-25.0.0'
+                    })*/
+    testCompile 'junit:junit:4.12'
+    compile 'org.apache.httpcomponents:httpcore:4.4.4'
+    //noinspection GradleCompatible
+    /*compile 'com.android.support:cardview-v7:25.3.1'*/
+    // compile 'com.android.support:recyclerview-v7:25.0.0'
+    compile 'com.android.support:support-v4:25.4.0'
+    compile('com.android.support:recyclerview-v7:25.0.0') {
+        exclude group: "com.android.support", module: "support-v4"
+    }
+    compile files('libs/activation.jar')
+    compile files('libs/additionnal.jar')
+    compile files('libs/ant.jar')
+    compile files('libs/commons-net-3.4.jar')
+    compile files('libs/core-2.2.jar')
+    compile files('libs/glide-3.7.0.jar')
+    compile files('libs/javax.mail-1.5.6.jar')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile files('libs/okhttp-3.4.1.jar')
+    compile files('libs/okio-1.9.0.jar')
+    compile files('libs/rebound-v0.3.3.jar')
+    compile files('libs/sunjce_provider.jar')
+    compile files('libs/uk-co-senab-photoview.jar')
+    compile files('libs/universal-image-loader-1.9.5.jar')
+}

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/content"
+    android:background="@color/cy_home_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="@color/cy_home_title"
+        >
+        <ImageView
+            android:id="@+id/title_l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/cy_main_left_b"/>
+      <android.support.v7.widget.RecyclerView
+          android:id="@+id/titleFlow"
+          android:layout_width="0dp"
+          android:layout_weight="1"
+          android:layout_gravity="center"
+          android:background="@color/no_color"
+          android:layout_height="match_parent"/>
+        <ImageView
+            android:id="@+id/title_r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/cy_main_right_b"/>
+
+
+    </LinearLayout>
+    <pad.stand.com.haidiyun.www.widget.UDlayout
+        android:id="@+id/ud_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="626">
+        <LinearLayout
+            android:id="@+id/search_layout"
+            android:layout_width="300px"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/search_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/search_bg_border"
+                android:tag="skin:search_bg_border:background">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="center"
+                    android:src="@drawable/search_i"
+                    android:tag="skin:search_i:src" />
+
+                <TextView
+                    android:id="@+id/search_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:hint="@string/search"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="43dp"
+                    android:paddingRight="43dp"
+                    android:singleLine="true"
+                    android:tag="skin:serch_cl:textHintColor"
+                    android:textColor="@color/serch_cl"
+                    android:textColorHint="@color/serch_cl"
+                    android:textSize="22sp"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:gravity="center_vertical"
+                    android:hint="@string/searchword"
+                    android:paddingLeft="43dp"
+                    android:paddingRight="43dp"
+                    android:singleLine="true"
+                    android:tag="skin:serch_cl:textHintColor"
+                    android:textColor="@color/serch_cl"
+                    android:textColorHint="@color/serch_cl"
+                    android:textSize="22sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/sear_del"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="4dp"
+                    android:scaleType="center"
+                    android:src="@drawable/search_del"
+                    android:tag="skin:search_del:src" />
+            </RelativeLayout>
+            <GridView
+                android:id="@+id/search_"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/no_color"
+                android:horizontalSpacing="3dp"
+                android:numColumns="3"
+                android:verticalSpacing="3dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/view_content"
+            android:layout_width="1280px"
+            android:layout_height="match_parent"
+             >
+            <LinearLayout
+                android:id="@+id/cover_left_b"
+                android:layout_width="0dp"
+                android:layout_weight="80"
+                android:gravity="center"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cy_main_left_b"/>
+
+            </LinearLayout>
+            <pad.stand.com.haidiyun.cy.widget.coverflow.RecyclerCoverFlow
+                android:id="@+id/coverFlow"
+                android:layout_width="0dp"
+                android:layout_weight="1130"
+                android:layout_height="match_parent"
+                android:background="@color/no_color"
+                >
+            </pad.stand.com.haidiyun.cy.widget.coverflow.RecyclerCoverFlow>
+            <LinearLayout
+                android:id="@+id/cover_right_b"
+                android:layout_width="0dp"
+                android:layout_weight="80"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cy_main_right_b"/>
+            </LinearLayout>
+        </LinearLayout>
+    </pad.stand.com.haidiyun.www.widget.UDlayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+
+        android:layout_weight="160">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/cy_bottom_bg"
+
+            android:orientation="horizontal"
+            android:layout_weight="140">
+            <LinearLayout
+                android:id="@+id/cover_left_s"
+                android:layout_width="0dp"
+                android:layout_weight="80"
+                android:gravity="center"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cy_main_left_s"/>
+
+            </LinearLayout>
+
+            <pad.stand.com.haidiyun.cy.widget.HorizontalListView
+                android:id="@+id/bottomFlow"
+                android:layout_width="0dp"
+                android:layout_weight="1130"
+                android:layout_gravity="center"
+                android:background="@color/no_color"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:id="@+id/cover_right_s"
+                android:layout_width="0dp"
+                android:layout_weight="80"
+                android:gravity="center"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cy_main_right_s"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:gravity="center_vertical"
+            android:layout_weight="68">
+            <Button
+                android:id="@+id/cy_bot_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:background="@color/no_color"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@drawable/cy_search_select"
+                android:text=" 搜索"/>
+            <Button
+                android:id="@+id/cy_bot_1"
+                android:layout_width="wrap_content"
+                android:background="@color/no_color"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/cy_bot_0"
+                android:layout_marginLeft="25dp"
+                android:textSize="18sp"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/cy_person_select"
+                android:text="人数"/>
+            <Button
+                android:id="@+id/cy_bot_2"
+                android:layout_toRightOf="@+id/cy_bot_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/no_color"
+                android:layout_marginLeft="25dp"
+                android:textSize="18sp"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/cy_table_select"
+                android:text="桌台"/>
+
+            <TextView
+                android:id="@+id/call_waiter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/cy_bot_2"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:maxLength="8"
+                android:padding="6dp"
+                android:textColor="@color/half_black"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+            <FrameLayout
+                android:id="@+id/cy_bot_3"
+                android:clickable="true"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/cy_bot_30"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/no_color"
+                    android:drawablePadding="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:drawableLeft="@drawable/cy_table_select"
+                    android:text="我的点餐"/>
+                <TextView
+                    android:id="@+id/dish_num"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="top|right"
+                    android:background="@drawable/shape_common_red_tip"/>
+            </FrameLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
